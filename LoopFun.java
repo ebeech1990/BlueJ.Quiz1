@@ -53,11 +53,21 @@ public class LoopFun
               ch[i] = word.charAt(i);
             }
             for(int i = 0; i < ch.length; i++){
-                if(ch[i] == 122){
-                    ch[i] == 97;
+                if(ch[i] == 120){ //122 - z    97 - a
+                    ch[i] = 97;
+                }
+                else if(ch[i] == 121){
+                    ch[i] = 98;
+                }
+                else if(ch[i] == 122){
+                    ch[i] = 99;
                 }
                 else{
-                    ch[i] += ch[i] + 3;
+                    int j = 3;
+                   while(j!=0){
+                       ch[i]++;
+                    j-= 1;
+                    }
                 }
             }
             String result = String.valueOf(ch);
