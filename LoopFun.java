@@ -11,11 +11,16 @@ public class LoopFun
        */
       public Integer factorial(Integer number){
           int j = 1;
-          for(int i = number; i <0; i--){
-             j = j*i;
-            }
-          return j;
-      }
+         if (number == 0) {
+          j= 1; 
+        }
+        else {
+        j= number*factorial(number-1); 
+    
+    } 
+  return j;
+}
+      
 
       /**
        * Given a phrase, get the acronym of that phrase. Acronym is the combination of
